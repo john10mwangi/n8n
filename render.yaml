@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: centria-chatbot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: your_secure_password
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: WEBHOOK_URL
+        value: https://centria-chatbot.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
